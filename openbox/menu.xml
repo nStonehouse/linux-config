@@ -1,0 +1,219 @@
+<openbox_menu>
+	<menu id="root-menu" label="TITLE">
+	<!-- this is a menu item, such as a program -->
+	<item label="Terminal">
+		<action name="Execute">
+			<execute>
+				lxterminal
+			</execute>
+		</action>
+	</item>
+	<item label="Sublime 3">
+		<action name="Execute">
+			<execute>
+				subl3
+			</execute>
+		</action>
+	</item>	
+	<item label="Chromium">
+		<action name="Execute">
+			<execute>
+				chromium
+			</execute>
+		</action>
+	</item>	
+	<separator />
+	<item label="Dillo">
+		<action name="Execute">
+			<execute>
+				dillo
+			</execute>
+		</action>
+	</item>	
+	<item label="Thunar">
+		<action name="Execute">
+		<execute>
+			thunar
+		</execute>
+		</action>
+	</item>
+  <!-- PLACES -->
+  <menu id="Place" label="Places">
+    <item label="home">
+      <action name="Execute">
+        <execute>
+          thunar ~/
+        </execute>
+      </action>
+    </item>
+    <item label="share">
+      <action name="Execute">
+        <execute>
+          thunar /mnt/share
+        </execute>
+      </action>
+    </item>
+    <item label="dropbox">
+      <action name="Execute">
+        <execute>
+          thunar ~/Dropbox
+        </execute>
+      </action>
+    </item>
+    <item label="Fedora">
+      <action name="Execute">
+        <execute>
+          thunar /mnt/fedora
+        </execute>
+      </action>
+    </item>
+    <item label="/">
+      <action name="Execute">
+        <execute>
+          thunar /
+        </execute>
+      </action>
+    </item>
+    <item label="/ (as root)">
+      <action name="Execute">
+        <execute>
+          sudo thunar /
+        </execute>
+      </action>
+    </item>
+  </menu>
+
+
+	<separator/>
+
+	<!-- this also links to a sub menu, which is defined inline -->
+	<menu id="Applications" label="Apps">
+    <item label="VirtualBox">
+      <action name="Execute">
+        <execute>
+          VirtualBox
+        </execute>
+      </action>
+    </item>
+    <item label="VLC">
+      <action name="Execute">
+        <execute>
+          vlc
+        </execute>
+      </action>
+    </item>
+	  <item label="Gimp">
+			<action name="Execute">
+				<execute>
+					gimp
+				</execute>
+			</action>
+	  </item>
+	  <item label="Abiword">
+			<action name="Execute">
+				<execute>
+					abiword
+				</execute>
+			</action>
+	  </item>	  
+	  <item label="Alsa Mixer">
+			<action name="Execute">
+				<execute>
+					lxterminal -e alsamixer
+				</execute>
+			</action>
+	  </item>
+    <item label="Libreoffice writer">
+      <action name="Execute">
+        <execute>
+          libreoffice --writer
+        </execute>
+      </action>
+    </item>
+    <item label="Evince">
+      <action name="Execute">
+        <execute>
+          evince
+        </execute>
+      </action>
+    </item>
+    <item label="Xournal">
+      <action name="Execute">
+        <execute>
+          xournal
+        </execute>
+      </action>
+    </item>
+	</menu>
+  <menu id="Config" label="Config">
+    <item label="reconfigure">
+      <action name="Reconfigure"/>
+    </item>
+    <item label="menu.xml">
+      <action name="Execute">
+        <execute>
+          leafpad ~/.config/openbox/menu.xml
+        </execute>
+      </action>
+    </item>
+    <item label="rc.xml">
+      <action name="Execute">
+        <execute>
+          leafpad ~/.config/openbox/rc.xml
+        </execute>
+      </action>
+    </item>
+    <item label=".pypanelrc">
+      <action name="Execute">
+        <execute>
+          leafpad ~/.pypanelrc
+        </execute>
+      </action>
+    </item>
+    <item label=".zshrc">
+      <action name="Execute">
+        <execute>
+          leafpad ~/.zshrc
+        </execute>
+      </action>
+    </item>
+    <item label="lxappearance">
+      <action name="Execute">
+        <execute>
+          lxappearance
+        </execute>
+      </action>
+    </item>
+    <item label="nvidia-settings">
+      <action name="Execute">
+        <execute>
+          nvidia-settings
+        </execute>
+      </action>
+    </item>
+  </menu>
+	<menu id="System" label="System">
+    <item label="Restart">
+  		<action name="Execute">
+  			<execute>
+  				sudo shutdown -r now
+  			</execute>
+  		</action>
+  	</item>
+    <item label="Shutdown">
+  		<action name="Execute">
+  			<execute>
+  				sudo shutdown -h now
+  			</execute>
+  		</action>
+  	</item>
+    <item label="Logout">
+  		<action name="Execute">
+  			<execute>
+  				openbox --exit
+  			</execute>
+  		</action>
+  	</item>
+  	</menu>
+  </menu>
+</openbox_menu>
