@@ -1,9 +1,9 @@
 # Linux Config Files
 
 ### Dotfiles
-.vimrc
-.zshrc
-.pypanelrc
+-.vimrc
+-.zshrc
+-.pypanelrc
 
 ### Openbox
 #### ~/.config/openbox/
