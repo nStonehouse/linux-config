@@ -4,7 +4,7 @@
 	<item label="Terminal">
 		<action name="Execute">
 			<execute>
-				lxterminal
+				terminator
 			</execute>
 		</action>
 	</item>
@@ -15,28 +15,116 @@
 			</execute>
 		</action>
 	</item>	
-	<item label="Chromium">
+	<item label="Chromium (blocked)">
 		<action name="Execute">
 			<execute>
-				chromium
+				chromium --profile-directory=Default
 			</execute>
 		</action>
 	</item>	
-	<separator />
-	<item label="Dillo">
-		<action name="Execute">
-			<execute>
-				dillo
-			</execute>
-		</action>
-	</item>	
-	<item label="Thunar">
-		<action name="Execute">
-		<execute>
-			thunar
-		</execute>
-		</action>
-	</item>
+  <item label="Chromium (unblocked)">
+    <action name="Execute">
+      <execute>
+        chromium --profile-directory="Profile 1"
+      </execute>
+    </action>
+  </item>
+  <item label="Thunderbird">
+    <action name="Execute">
+      <execute>
+        thunderbird
+      </execute>
+    </action>
+  </item>
+  <item label="Filezilla">
+    <action name="Execute">
+    <execute>
+      filezilla
+    </execute>
+    </action>
+  </item>
+
+	<separator/>
+
+	<!-- this also links to a sub menu, which is defined inline -->
+	<menu id="Applications" label="Office">
+	  <item label="Abiword">
+			<action name="Execute">
+				<execute>
+					abiword
+				</execute>
+			</action>
+	  </item>	  
+    <item label="Libreoffice writer">
+      <action name="Execute">
+        <execute>
+          libreoffice --writer
+        </execute>
+      </action>
+    </item>
+    <item label="Evince">
+      <action name="Execute">
+        <execute>
+          evince
+        </execute>
+      </action>
+    </item>
+    <item label="Xournal">
+      <action name="Execute">
+        <execute>
+          xournal
+        </execute>
+      </action>
+    </item>
+	</menu>
+  <menu id="Media" label="Media">
+
+    <item label="VLC">
+      <action name="Execute">
+        <execute>
+          vlc
+        </execute>
+      </action>
+    </item>
+    <item label="Gimp">
+      <action name="Execute">
+        <execute>
+          gimp
+        </execute>
+      </action>
+    </item>
+    <item label="Alsa Mixer">
+      <action name="Execute">
+        <execute>
+          lxterminal -e alsamixer
+        </execute>
+      </action>
+    </item>
+    <item label="Dillo">
+      <action name="Execute">
+        <execute>
+          dillo
+        </execute>
+      </action>
+    </item> 
+  </menu>
+  <menu id="Other" label="Other">
+    <item label="VirtualBox">
+      <action name="Execute">
+        <execute>
+          VirtualBox
+        </execute>
+      </action>
+    </item>
+    <item label="Thunar">
+      <action name="Execute">
+      <execute>
+        thunar
+      </execute>
+      </action>
+    </item>
+  </menu>
+  <separator/>
   <!-- PLACES -->
   <menu id="Place" label="Places">
     <item label="home">
@@ -82,69 +170,6 @@
       </action>
     </item>
   </menu>
-
-
-	<separator/>
-
-	<!-- this also links to a sub menu, which is defined inline -->
-	<menu id="Applications" label="Apps">
-    <item label="VirtualBox">
-      <action name="Execute">
-        <execute>
-          VirtualBox
-        </execute>
-      </action>
-    </item>
-    <item label="VLC">
-      <action name="Execute">
-        <execute>
-          vlc
-        </execute>
-      </action>
-    </item>
-	  <item label="Gimp">
-			<action name="Execute">
-				<execute>
-					gimp
-				</execute>
-			</action>
-	  </item>
-	  <item label="Abiword">
-			<action name="Execute">
-				<execute>
-					abiword
-				</execute>
-			</action>
-	  </item>	  
-	  <item label="Alsa Mixer">
-			<action name="Execute">
-				<execute>
-					lxterminal -e alsamixer
-				</execute>
-			</action>
-	  </item>
-    <item label="Libreoffice writer">
-      <action name="Execute">
-        <execute>
-          libreoffice --writer
-        </execute>
-      </action>
-    </item>
-    <item label="Evince">
-      <action name="Execute">
-        <execute>
-          evince
-        </execute>
-      </action>
-    </item>
-    <item label="Xournal">
-      <action name="Execute">
-        <execute>
-          xournal
-        </execute>
-      </action>
-    </item>
-	</menu>
   <menu id="Config" label="Config">
     <item label="reconfigure">
       <action name="Reconfigure"/>
