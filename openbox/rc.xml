@@ -274,7 +274,7 @@
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>lxterminal</command>
+        <command>terminator -l dessert</command>
       </action>
     </keybind>
 
