@@ -1,2 +1,3 @@
 sh ~/.fehbg &
-pypanel &
+tint2 &
+#pypanel &
